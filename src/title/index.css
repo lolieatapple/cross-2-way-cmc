@@ -1,0 +1,10 @@
+.tt {
+  height: 3%;
+  width: 100%;
+  font-size: 2vh;
+  color: rgb(31, 230, 230);
+  padding: 0vh;
+  margin: 0.5vh;
+  display: flex;
+  justify-content: center;
+}

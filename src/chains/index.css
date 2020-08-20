@@ -1,0 +1,36 @@
+.bd {
+  color: azure;
+  background-color: rgb(7, 87, 86);
+  display: flex;
+}
+.hf {
+  width: 50%;
+  justify-content: center;
+
+}
+
+/* multi block
+.tb {
+  text-align: center;
+}
+.ant-table-content {
+  display: inline-block;
+} */
+
+/* single block
+.ant-table-content {
+  display: table;
+  margin:0 auto;
+} */
+
+.tb {
+  /* display: table-cell;
+  text-align: center;
+  vertical-align: middle; */
+  display: flex;
+  justify-content: center;
+}
+
+.iid {
+  background-color: rgb(127, 27, 26);
+}
