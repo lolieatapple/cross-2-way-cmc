@@ -1,39 +1,13 @@
 .App {
   text-align: center;
-  /* background-color: #282c34; */
   min-height: 100vh;
-
   max-width: 1600px;
   margin: auto;
   display: grid;
   grid-template-columns: 0.1fr 4fr 0.1fr;
-  grid-template-rows: 0.1fr 2fr 2fr 0.1fr;
-  grid-template-areas: "title title title" ". tms ." ". oracles ." ". . .";
+  grid-template-rows: 0.1fr 4fr 0.1fr;
+  grid-template-areas: "aTitle aTitle aTitle" ". aChains ." ". . .";
 }
 
-.Title { grid-area: title; }
-.TokenManagers { grid-area: tms; }
-.Oracles { grid-area: oracles; }
-
-.App button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 0.5vh 10vh;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 2vh;
-}
-
-.App button:hover {
-  background-color: rgb(17, 230, 191); /* Green */
-  color: white;
-}
-
-.App input {
-  width: 90%;
-  height: 90%;
-  color: #282c34;
-}
+.Title { grid-area: aTitle; }
+.Chains { grid-area: aChains;}

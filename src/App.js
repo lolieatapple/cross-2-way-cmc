@@ -1,18 +1,24 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Title from './titile';
-import Oracles from './oracles';
-import TokenManagers from './tokenManagers'
+import Title from './title';
+import Chains from './chains';
+import { Layout } from 'antd';
 
-function App() {
-  return (
-    <div className="App">
-      <Title />
-      <Oracles />
-      <TokenManagers />
-    </div>
-  );
+window.serverUrl = "http://192.168.1.179:25555/";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className='Title'>
+          <Title />
+        </div>
+        <div className='Chains'>
+          <Chains />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
