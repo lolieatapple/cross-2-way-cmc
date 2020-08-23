@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+            max-width: 900px;
+            background-color: #fff;
+            margin: 0 auto;
+            padding: 0 60px;
+            
+            display: grid;
+            grid-template-columns: 0.4fr 0.3fr 0.3fr;
+            grid-template-areas: 'header header header' 'sider main' 'footer footer';
+            grid-column-gap: 10px;
+            grid-row-gap: 15px;
+        }
+        header {
+            grid-area: header;
+            display: grid;
+            padding: 20px 0;
+            grid-template-columns: 1fr 1fr;
+        }
+        .header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: #d5c9e2;
+        }
+        header button {
+            justify-self: end;
+        }
+        header nav {
+            justify-self: start;
+        }
+        header nav ul {
+            display: flex;
+            align-items: baseline;
+            list-style-type: none;
+        }
+        
+        header nav ul li {
+            padding-right: 5px;
+        }
+
+        .main {
+            grid-area: main;
+            margin-right: 60px;
+        }
+
+        .sidebar {
+            grid-area: sider;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+              <ul>
+                <li><img width="26px" height="26px" src='./favicon.ico'></li>
+                <li>ABount</li>
+                <li>Contact</li>
+              </ul>
+            </nav>
+            <button>login</button>
+        </header>
+        <aside class="sidebar">
+            <h3>sidebar</h3>
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+                <li>444</li>
+                <li>555</li>
+            </ul>
+        </aside>
+        <section class="main">
+            <h2>main_h2</h2>
+            <p>main_p</p>
+        </section>
+        <footer>
+            <h3>footer</h3>
+            <p>ppp</p>
+        </footer>
+    </div>
+</body>
+</html>

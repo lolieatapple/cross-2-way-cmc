@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        header {
+            padding: 15px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header nav ul {
+            display: flex;
+            align-items: baseline;
+            list-style-type: none;
+        }
+        
+        header nav ul li {
+            padding-right: 5px;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .main {
+            flex: 3;
+            margin-right: 60px;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+              <ul>
+                <li><img width="26px" height="26px" src='./favicon.ico'></li>
+                <li>ABount</li>
+                <li>Contact</li>
+              </ul>
+            </nav>
+            <button>login</button>
+        </header>
+        <div class="wrapper">
+            <aside class="sidebar">
+                <h3>sidebar</h3>
+                <ul>
+                    <li>111</li>
+                    <li>222</li>
+                    <li>333</li>
+                    <li>444</li>
+                    <li>555</li>
+                </ul>
+            </aside>
+            <section class="main">
+                <h2>main_h2</h2>
+                <p>main_p</p>
+            </section>
+        </div>
+        <footer>
+            <h3>footer</h3>
+            <p>ppp</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,22 +1,98 @@
 import React, { Component } from 'react';
 import './App.css';
-import Title from './title';
-import Chains from './chains';
-import { Layout } from 'antd';
 
-window.serverUrl = "http://192.168.1.179:25555/";
+// import { Layout } from 'antd';
+// const { Header, Footer, Sider, Content } = Layout;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className='Title'>
-          <Title />
+      <>
+        <div className='app'>
+          <div className='title'>
+            <div>header</div>
+          </div>
+        <div className='main'>
+          <div class='oracles' >
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+              <div>prices:prices</div>
+          </div>
+          <div className='tms'>
+              <div>tms</div>
+              <div>tms</div>
+              <div>tms</div>
+              <div>tms</div>
+          </div>
         </div>
-        <div className='Chains'>
-          <Chains />
         </div>
-      </div>
+      </>
     )
   }
 }

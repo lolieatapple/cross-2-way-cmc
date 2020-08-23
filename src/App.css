@@ -1,13 +1,82 @@
-.App {
-  text-align: center;
-  min-height: 100vh;
-  max-width: 1600px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 0.1fr 4fr 0.1fr;
-  grid-template-rows: 0.1fr 4fr 0.1fr;
-  grid-template-areas: "aTitle aTitle aTitle" ". aChains ." ". . .";
+/* px,像素
+  em,元素的字体高度
+  %,百分比
+  rem,根元素的font-size
+  vm,视窗宽度，1vw=视窗宽度的1%
+  vh,视窗高度，1vh=视窗高度的1%
+  rpx, 微信把屏幕等分成750rpx，如果手机分辨率是375px，则1rpx=0.5px
+*/
+/* xs sm md lg xl ：<768 <992 <1200 <1600 1600+ */
+/* ipad iphone: only max-device-width orientation: portrait landscape*/
+@media only screen and (max-width: 768px) {
+  html { font-size: 12px; }
 }
 
-.Title { grid-area: aTitle; }
-.Chains { grid-area: aChains;}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  html { font-size: 14px; }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  html { font-size: 16px; }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1201px) {
+  html { font-size: 18px; }
+}
+@media only screen and (max-width: 2400px) and (min-width: 1601px) {
+  html { font-size: 20px; }
+}
+@media only screen and (min-width: 2401px) {
+  html { font-size: 28px; }
+}
+
+body {
+  background-color: #7dbcea;
+  color: #fff;
+  text-align: center;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 0.1fr 4fr;
+  grid-template-areas: "title" "main";
+
+  grid-row-gap: 5px;
+}
+
+.title {
+  grid-area: title;
+  background-color: rgba(16, 142, 233, 1);
+  margin-bottom: 0.5rem;
+}
+
+.main {
+  grid-area: main;
+}
+.oracles {
+  background-color: rgba(16, 142, 233, 1);
+  padding: 0.2rem;
+  margin-bottom: 0.3rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.oracles > * {
+  padding: 0.2rem;
+}
+
+.tms {
+  background-color: rgba(16, 142, 233, 1);
+  padding: 0.2rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tms > * {
+  padding: 0.2rem;
+}
