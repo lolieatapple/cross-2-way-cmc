@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-
-// import { Layout } from 'antd';
-// const { Header, Footer, Sider, Content } = Layout;
+import Chains from './chains';
+import Oracles from './oracles';
+import TokenManagers from './tokenManagers';
 
 class App extends Component {
   render() {
@@ -10,86 +10,12 @@ class App extends Component {
       <>
         <div className='app'>
           <div className='title'>
-            <div>header</div>
+            <div>cross chain oracle tokenManager contract states</div>
           </div>
         <div className='main'>
-          <div class='oracles' >
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-              <div>prices:prices</div>
-          </div>
-          <div className='tms'>
-              <div>tms</div>
-              <div>tms</div>
-              <div>tms</div>
-              <div>tms</div>
-          </div>
+          <Chains />
+          <Oracles />
+          <TokenManagers />
         </div>
         </div>
       </>

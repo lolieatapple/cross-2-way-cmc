@@ -5,7 +5,7 @@ class TokenManager extends Component {
   // TODO: update remove tokenPair
   render() {
     return (
-      <div className="TokenManager">
+      <div className="tms">
         <div>
           blockChain : blockChain
         </div>

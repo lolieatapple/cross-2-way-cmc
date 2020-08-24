@@ -52,7 +52,7 @@ body {
 .main {
   grid-area: main;
 }
-.oracles {
+.oracles, .chains {
   background-color: rgba(16, 142, 233, 1);
   padding: 0.2rem;
   margin-bottom: 0.3rem;
@@ -60,10 +60,13 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .oracles > * {
+  padding: 0.2rem;
+}
+.chains > * {
   padding: 0.2rem;
 }
 
