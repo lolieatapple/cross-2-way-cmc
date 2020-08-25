@@ -41,16 +41,36 @@ class Oracle extends Component {
       })
     }
 
-    let sgDate = [];
-    const sgColumns = [];
+    const sgColumns = ['name'];
+    const sgsTmp = [];
+    if (chainNames.length > 0) {
+      sgColumns.push(...chainNames);
+      const groupIds = Object.keys(this.state.wan.sgs);
+      groupIds.forEach(id => {
+        const fields = Object.keys(this.state.wan.sgs[id]);
+        const data = fields.map(field => {
+          const obj = {name: field}
+          chainNames.forEach(i => {
+            if (this.state[i].sgs[id] && this.state[i].sgs[id].gpk1 !== null) {
+              obj[i] = this.state[i].sgs[id][field]
+            } else {
+              obj[i] = 'empty'
+            }
+          })
+          return obj;
+        })
+        console.log(JSON.stringify(data));
+        sgsTmp.push(<Fields columns={sgColumns} data={data} />);
+      })
+    }
 
     let prices = <div>Loading...</div>;
     let sgs = <div>Loading...</div>;
     if (priceData && priceData.length > 0) {
       prices = <Fields columns={priceColumns} data={priceData} />;
     }
-    if (sgDate && sgDate.length > 0) {
-      sgs = <Fields columns={sgColumns} data={sgDate} />
+    if (sgsTmp.length > 0) {
+      sgs = sgsTmp
     }
     return (
       <div className='oracles'>

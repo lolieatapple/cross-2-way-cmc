@@ -10,7 +10,7 @@ class Fields extends Component {
         title: item,
         key: item,
         dataIndex: item,
-        render: text => <div style={{"padding": "2px", "color": "#43a2a2"}}>{text}</div>
+        render: text => <div style={{"padding": "2px", "background-color": "#434242"}}>{text}</div>
       }
     })
 
@@ -18,7 +18,7 @@ class Fields extends Component {
     const data = this.props.data;
 
     return (
-      <div>
+      <div style={{"margin-bottom": "10px", "background-color": "#121335"}}>
         <Table bordered={true} columns={columns} dataSource={data} pagination={false} />
       </div>
     )
