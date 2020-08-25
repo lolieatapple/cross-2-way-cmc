@@ -20,7 +20,7 @@ class Oracle extends Component {
   componentDidMount() {
     console.log("Oracle ComponentDidMount")
     this.getInfo()
-    this.timer = setInterval(this.getInfo, 5000, null)
+    this.timer = setInterval(this.getInfo, 500000, null)
   }
 
   componentWillUnmount() {
