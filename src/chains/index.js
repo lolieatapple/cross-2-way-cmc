@@ -33,7 +33,7 @@ class Chains extends Component {
     const chainsNames = Object.keys(this.state);
     if (chainsNames.length > 0) {
       chainInfoColumns.push(...chainsNames);
-      const chainInfoData = Object.keys(this.state.wan).map(field => {
+      const chainInfoData = Object.keys(this.state.WanChain).map(field => {
         const obj = {name: field}
         chainsNames.forEach(i => (obj[i] = this.state[i][field]))
         return obj;

@@ -34,9 +34,9 @@ class TokenManager extends Component {
     let tmsTmp = [];
     if (chainNames.length > 0) {
       tmColumns.push(...chainNames);
-      const ids = Object.keys(this.state.wan.tokenPairs);
+      const ids = Object.keys(this.state.WanChain.tokenPairs);
       ids.forEach(id => {
-        const fields = Object.keys(this.state.wan.tokenPairs[id]);
+        const fields = Object.keys(this.state.WanChain.tokenPairs[id]);
         const data = fields.map(field => {
           const obj = {name: field}
           chainNames.forEach(i => {

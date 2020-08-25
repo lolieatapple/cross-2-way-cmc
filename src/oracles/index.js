@@ -34,7 +34,7 @@ class Oracle extends Component {
     let priceData = [];
     if (chainNames.length > 0) {
       priceColumns.push(...chainNames);
-      priceData = Object.keys(this.state.wan.prices).map(field => {
+      priceData = Object.keys(this.state.WanChain.prices).map(field => {
         const obj = {name: field}
         chainNames.forEach(i => (obj[i] = this.state[i].prices[field]))
         return obj;
@@ -45,9 +45,9 @@ class Oracle extends Component {
     const sgsTmp = [];
     if (chainNames.length > 0) {
       sgColumns.push(...chainNames);
-      const groupIds = Object.keys(this.state.wan.sgs);
+      const groupIds = Object.keys(this.state.WanChain.sgs);
       groupIds.forEach(id => {
-        const fields = Object.keys(this.state.wan.sgs[id]);
+        const fields = Object.keys(this.state.WanChain.sgs[id]);
         const data = fields.map(field => {
           const obj = {name: field}
           chainNames.forEach(i => {
@@ -60,7 +60,7 @@ class Oracle extends Component {
           return obj;
         })
         console.log(JSON.stringify(data));
-        sgsTmp.push(<Fields title={`StoreManGroup: ${id}`} columns={sgColumns} data={data} />);
+        sgsTmp.push(<Fields title={`StoreManGroupID: ${id}`} columns={sgColumns} data={data} />);
       })
     }
 
