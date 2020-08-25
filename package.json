@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "http-server ./build -p 9999"
+    "server": "http-server ./build -p 9999 -c-1"
   },
   "eslintConfig": {
     "extends": "react-app"
