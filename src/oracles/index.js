@@ -60,14 +60,14 @@ class Oracle extends Component {
           return obj;
         })
         console.log(JSON.stringify(data));
-        sgsTmp.push(<Fields columns={sgColumns} data={data} />);
+        sgsTmp.push(<Fields title={`StoreManGroup: ${id}`} columns={sgColumns} data={data} />);
       })
     }
 
     let prices = <div>Loading...</div>;
     let sgs = <div>Loading...</div>;
     if (priceData && priceData.length > 0) {
-      prices = <Fields columns={priceColumns} data={priceData} />;
+      prices = <Fields title="Prices" columns={priceColumns} data={priceData} />;
     }
     if (sgsTmp.length > 0) {
       sgs = sgsTmp

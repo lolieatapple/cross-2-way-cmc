@@ -48,7 +48,7 @@ class TokenManager extends Component {
           })
           return obj;
         })
-        tmsTmp.push(<Fields columns={tmColumns} data={data} />)
+        tmsTmp.push(<Fields title={`TokenPairID: ${id}`} columns={tmColumns} data={data} />)
       })
     }
     let tms = <div>Loading...</div>

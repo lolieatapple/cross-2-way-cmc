@@ -40,7 +40,7 @@ class Chains extends Component {
       })
       return (
         <div className='chains'>
-          <Fields columns={chainInfoColumns} data={chainInfoData} />
+          <Fields title="Chains" columns={chainInfoColumns} data={chainInfoData} />
         </div>
       )
     } else {

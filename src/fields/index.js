@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'antd';
+import { Table, Divider } from 'antd';
 import './index.css';
 
 class Fields extends Component {
@@ -19,6 +19,7 @@ class Fields extends Component {
 
     return (
       <div style={{"margin-bottom": "10px", "background-color": "#121335"}}>
+        <Divider orientation="left">{this.props.title}</Divider>
         <Table bordered={true} columns={columns} dataSource={data} pagination={false} />
       </div>
     )
