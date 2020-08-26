@@ -29,24 +29,16 @@ class Chains extends Component {
   }
 
   render() {
-    const chainInfoColumns = ['name'];
-    const chainsNames = Object.keys(this.state);
-    if (chainsNames.length > 0) {
-      chainInfoColumns.push(...chainsNames);
-      const chainInfoData = Object.keys(this.state.WanChain).map(field => {
-        const obj = {name: field}
-        chainsNames.forEach(i => (obj[i] = this.state[i][field]))
-        return obj;
-      })
+    if (this.state.columns && this.state.columns.length > 0) {
       return (
         <div className='chains'>
-          <Fields title="Chains" columns={chainInfoColumns} data={chainInfoData} />
+          <Fields title="Chains" columns={this.state.columns} data={this.state.data} />
         </div>
       )
     } else {
       return (
         <div className='chains'>
-          Loading...
+          <div>Loading...</div>
         </div>
       )
     }

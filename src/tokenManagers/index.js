@@ -29,31 +29,11 @@ class TokenManager extends Component {
   }
   // TODO: update remove tokenPair
   render() {
-    const chainNames = Object.keys(this.state);
-    const tmColumns = ['name'];
-    let tmsTmp = [];
-    if (chainNames.length > 0) {
-      tmColumns.push(...chainNames);
-      const ids = Object.keys(this.state.WanChain.tokenPairs);
-      ids.forEach(id => {
-        const fields = Object.keys(this.state.WanChain.tokenPairs[id]);
-        const data = fields.map(field => {
-          const obj = {name: field}
-          chainNames.forEach(i => {
-            if (this.state[i].tokenPairs[id]) {
-              obj[i] = this.state[i].tokenPairs[id][field]
-            } else {
-              obj[i] = 'empty'
-            }
-          })
-          return obj;
-        })
-        tmsTmp.push(<Fields title={`TokenPairID: ${id}`} columns={tmColumns} data={data} />)
-      })
-    }
     let tms = <div>Loading...</div>
-    if (tmsTmp.length > 0) {
-      tms = tmsTmp
+    if (this.state.tms && this.state.tms.length > 0) {
+      tms = this.state.tms.map(tm => {
+        return <Fields title={tm.title} columns={tm.columns} data={tm.data} />
+      })
     }
     return (
       <div className="tms">

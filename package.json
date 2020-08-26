@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "http-server ./build -p 9999 -c-1"
+    "server": "http-server ./build -p 9999 -c-1",
+    "bm": "autocannon -c 100 -d 5 -p 10 http://192.168.1.179:9999"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autocannon": "^6.1.0"
   }
 }

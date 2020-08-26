@@ -29,48 +29,16 @@ class Oracle extends Component {
   }
 
   render() {
-    const priceColumns = ['name'];
-    const chainNames = Object.keys(this.state);
-    let priceData = [];
-    if (chainNames.length > 0) {
-      priceColumns.push(...chainNames);
-      priceData = Object.keys(this.state.WanChain.prices).map(field => {
-        const obj = {name: field}
-        chainNames.forEach(i => (obj[i] = this.state[i].prices[field]))
-        return obj;
-      })
-    }
-
-    const sgColumns = ['name'];
-    const sgsTmp = [];
-    if (chainNames.length > 0) {
-      sgColumns.push(...chainNames);
-      const groupIds = Object.keys(this.state.WanChain.sgs);
-      groupIds.forEach(id => {
-        const fields = Object.keys(this.state.WanChain.sgs[id]);
-        const data = fields.map(field => {
-          const obj = {name: field}
-          chainNames.forEach(i => {
-            if (this.state[i].sgs[id] && this.state[i].sgs[id].gpk1 !== null) {
-              obj[i] = this.state[i].sgs[id][field]
-            } else {
-              obj[i] = 'empty'
-            }
-          })
-          return obj;
-        })
-        console.log(JSON.stringify(data));
-        sgsTmp.push(<Fields title={`StoreManGroupID: ${id}`} columns={sgColumns} data={data} />);
-      })
-    }
-
     let prices = <div>Loading...</div>;
     let sgs = <div>Loading...</div>;
-    if (priceData && priceData.length > 0) {
-      prices = <Fields title="Prices" columns={priceColumns} data={priceData} />;
+  
+    if (this.state.prices) {
+      prices = <Fields title={this.state.prices.title} columns={this.state.prices.columns} data={this.state.prices.data} />
     }
-    if (sgsTmp.length > 0) {
-      sgs = sgsTmp
+    if (this.state.sgs && this.state.sgs.length > 0) {
+      sgs = this.state.sgs.map(sg => {
+        return <Fields title={sg.title} columns={sg.columns} data={sg.data} />
+      })
     }
     return (
       <div className='oracles'>
