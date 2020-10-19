@@ -37,7 +37,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-rows: 0.1fr 4fr;
+  grid-template-rows: 30px auto;
   grid-template-areas: "title" "main";
 
   grid-row-gap: 5px;
