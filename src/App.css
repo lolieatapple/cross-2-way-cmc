@@ -20,10 +20,10 @@
   html { font-size: 12px; }
 }
 @media only screen and (max-width: 1600px) and (min-width: 1201px) {
-  html { font-size: 13px; }
+  html { font-size: 12px; }
 }
 @media only screen and (max-width: 2400px) and (min-width: 1601px) {
-  html { font-size: 14px; }
+  html { font-size: 12px; }
 }
 @media only screen and (min-width: 2401px) {
   html { font-size: 18px; }
@@ -37,7 +37,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-rows: 0.1fr 4fr;
+  grid-template-rows: 30px auto;
   grid-template-areas: "title" "main";
 
   grid-row-gap: 5px;
