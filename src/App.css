@@ -37,11 +37,16 @@ body {
 }
 
 .app {
-  display: grid;
+  /* display: grid;
   grid-template-rows: 30px auto;
   grid-template-areas: "title" "main";
 
-  grid-row-gap: 5px;
+  grid-row-gap: 5px; */
+
+  background-color: rgb(255, 255, 255);
+
+  height: 100vh;
+  overflow: auto;
 }
 
 .title {
@@ -93,3 +98,8 @@ body {
 .tms > * {
   padding: 0.2rem;
 }
+
+@import '~@fontsource/roboto/300.css';
+@import '~@fontsource/roboto/400.css';
+@import '~@fontsource/roboto/500.css';
+@import '~@fontsource/roboto/700.css';
