@@ -32,10 +32,6 @@ export function Chains() {
   return (
     <div>
       <div style={{backgroundColor: 'rgb(231, 235, 240)', padding: '24px', borderRadius: '10px'}}>
-        {/* <Typography variant='h4'>
-          Blockchain Base Info
-        </Typography> */}
-        <p></p>
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} >
           <TableHead>

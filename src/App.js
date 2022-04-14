@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Chains } from './chains';
-import { Oracles } from './oracles';
+import { OraclePrice, OracleSmg } from './oracles';
 import {TokenManager} from './tokenManagers';
 import { Collapse } from 'antd';
 const { Panel } = Collapse;
@@ -12,14 +12,17 @@ class App extends Component {
       <>
         <div className='app'>
           <div style={{padding: '20px'}}>
-            <Collapse defaultActiveKey={['1', '2', '3']} >
+            <Collapse defaultActiveKey={['1', '2', '3', '4']} >
               <Panel header="Blockchain Base Info" key="1">
                 <Chains />
               </Panel>
-              <Panel header="Oracle Info" key="2">
-                <Oracles />
+              <Panel header="Oracle Storeman Info" key="2">
+                <OracleSmg />
               </Panel>
-              <Panel header="Token Pairs Info" key="3">
+              <Panel header="Oracle Prices Info" key="3">
+                <OraclePrice />
+              </Panel>
+              <Panel header="Token Pairs Info" key="4">
                 <TokenManager />
               </Panel>
             </Collapse>
