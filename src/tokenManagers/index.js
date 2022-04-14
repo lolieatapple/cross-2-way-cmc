@@ -71,7 +71,7 @@ export function TokenManager() {
               </Table>
             </TableContainer>
           </div>
-          })
+          }).reverse()
         }
       </div>
     </div>

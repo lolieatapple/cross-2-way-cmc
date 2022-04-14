@@ -35,40 +35,6 @@ export function Oracles() {
     <div>
       <div style={{backgroundColor: 'rgb(231, 235, 240)', padding: '24px', borderRadius: '10px'}}>
         <Typography variant='h6'>
-          Prices
-        </Typography>
-        <p></p>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} >
-            <TableHead>
-              <TableRow>
-                {
-                  headers && headers.map(v=><TableCell key={v} >{v}</TableCell>)
-                }
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {
-                rows && rows.map(v=>{
-                  return <TableRow
-                    key={v.name}
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                  >
-                    {
-                      Object.keys(v).map(k=>{
-                        return <TableCell key={k}>{v[k]}</TableCell>
-                      })
-                    }
-                  </TableRow>
-                })
-              }
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
-      <p></p>
-      <div style={{backgroundColor: 'rgb(231, 235, 240)', padding: '24px', borderRadius: '10px'}}>
-        <Typography variant='h6'>
           Storeman Group Info
         </Typography>
         <p></p>
@@ -107,8 +73,42 @@ export function Oracles() {
               </Table>
             </TableContainer>
           </div>
-          })
+          }).reverse()
         }
+      </div>
+      <p></p>
+      <div style={{backgroundColor: 'rgb(231, 235, 240)', padding: '24px', borderRadius: '10px'}}>
+        <Typography variant='h6'>
+          Prices
+        </Typography>
+        <p></p>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} >
+            <TableHead>
+              <TableRow>
+                {
+                  headers && headers.map(v=><TableCell key={v} >{v}</TableCell>)
+                }
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {
+                rows && rows.map(v=>{
+                  return <TableRow
+                    key={v.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    {
+                      Object.keys(v).map(k=>{
+                        return <TableCell key={k}>{v[k]}</TableCell>
+                      })
+                    }
+                  </TableRow>
+                })
+              }
+            </TableBody>
+          </Table>
+        </TableContainer>
       </div>
     </div>
   );
