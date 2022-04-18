@@ -3,7 +3,7 @@ import './App.css';
 import { Chains } from './chains';
 import { OraclePrice, OracleSmg } from './oracles';
 import {TokenManager} from './tokenManagers';
-import { Collapse } from 'antd';
+import { Collapse, Space, Button } from 'antd';
 const { Panel } = Collapse;
 
 class App extends Component {
@@ -12,6 +12,15 @@ class App extends Component {
       <>
         <div className='app'>
           <div style={{padding: '20px'}}>
+            <Space>
+              <Button onClick={()=>{
+                window.location = "https://cross-monitor.vercel.app/"
+              }}>Switch To Mainnet</Button>
+              <Button onClick={()=>{
+                window.location = "https://cross-monitor-testnet.vercel.app/"
+              }}>Switch To Testnet</Button>
+            </Space>
+            <p></p>
             <Collapse defaultActiveKey={['1', '2', '3', '4']} >
               <Panel header="Blockchain Base Info" key="1">
                 <Chains />
