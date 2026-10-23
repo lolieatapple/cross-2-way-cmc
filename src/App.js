@@ -20,10 +20,10 @@ class App extends Component {
                 window.location = "https://cross-monitor-testnet.vercel.app/"
               }}>Switch To Testnet</Button>
               <Button onClick={()=>{
-                window.location = "http://34.210.149.238:13200/tms/refresh"
+                window.location = "https://testnet-oracle-13200.wanscan.org/tms/refresh"
               }}>Testnet Manual Refresh</Button>
               <Button onClick={()=>{
-                window.location = "http://34.210.149.238:3200/tms/refresh"
+                window.location = "https://testnet-oracle-3200.wanscan.org/tms/refresh"
               }}>Mainnet Manual Refresh</Button>
             </Space>
             <p></p>
